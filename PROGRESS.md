@@ -132,6 +132,10 @@ Each step: **What** it is, and **Why** we're doing it.
   - Why: Makes it available to employees at a URL, and only to approved employees.
   - Course lectures: "Writing Docker file", "Deployment". Also review the original Dockerfile's disabled CORS/XSRF protection.
 
+- [x] **Published on GitHub** — https://github.com/samriddhi56652/hr-policy-assistant (public, 2026-10-14)
+  - What: README with architecture diagrams, results and design decisions; example settings files; personal details in the notes replaced with placeholders.
+  - Why: To show the project (code + how it was built and tested) to interviewers. Secrets and private notes stay out via `.gitignore` — checked before the first push.
+
 - [ ] **25. Cleanup**
   - What: Delete or stop the cloud resources once you're done (Cloud Run service, container images, bucket, Model Armor template, secrets, Qdrant cluster, API keys).
   - Why: Things left running keep costing money and leave keys and data online. Course lecture: "Cleanup".

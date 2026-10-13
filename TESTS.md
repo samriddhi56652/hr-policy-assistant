@@ -716,3 +716,17 @@ roles/modelarmor.user
 No errors, tracebacks or exceptions since the public deploy; no `BACKUP MODEL USED` (Gemini answered).
 
 **Means:** ✅ In the cloud: login → allow-list → Model Armor (question) → cache → search + Gemini → Model Armor (answer), all working and all visible in the logs. Step 24 complete.
+
+---
+
+## Publishing to GitHub — pre-push and post-push checks
+
+**What & why:** Before making the repository public, checked that nothing private or personal would be published; after pushing, checked the public page.
+
+| Check | Result |
+|---|---|
+| Private files tracked by git (`.env`, `deploy.env.yaml`, `.streamlit/…`, private notes, `.venv`) | none — all ignored ✅ |
+| Staged content searched for API keys (LangSmith, Groq, Jina, Qdrant JWT, OAuth secret) | none — only placeholders in the `*.example` files ✅ |
+| Personal emails / billing IDs / project number in staged content | none (replaced with placeholders beforehand) ✅ |
+| Public page | 57 files, README shown; no private files ✅ |
+| README diagrams | the review browser blocked GitHub's diagram service ("Unable to render rich display", `ERR_BLOCKED_BY_CLIENT`); both diagrams validated by rendering them with mermaid.ink → valid ✅ |

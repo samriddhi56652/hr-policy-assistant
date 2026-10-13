@@ -97,3 +97,13 @@ Which files were created or changed in each step, what changed, and who made the
 | 24e | *(no files)* | Secret Manager: `streamlit-auth` created from `.streamlit/secrets.cloud.toml` (settings verified identical), readable only by `hr-assistant-run` | Claude |
 | 24e | `deploy.env.yaml` | `ALLOWED_EMPLOYEE_EMAILS: "approved-user-1@example.com,approved-user-2@example.com"` (only that line touched) | Claude |
 | 24e | `Dockerfile` | `--browser.gatherUsageStats=false` added to the start command | Claude |
+
+## Publishing
+
+| Step | File | Change | Made by |
+|---|---|---|---|
+| GitHub | `README.md` | Created — overview, architecture diagrams (mermaid), tech stack, measured results, design decisions, structure, how to run/deploy | Claude |
+| GitHub | `.env.example`, `deploy.env.example.yaml`, `secrets.toml.example` | Created — settings templates with placeholders only | Claude |
+| GitHub | `TESTS.md`, `PROGRESS.md`, `CHANGELOG.md` | Personal details replaced with placeholders (emails, billing IDs, live URL) | Claude |
+| GitHub | *(git)* | Repository initialised; first commit `ec84e05` (57 files) after scanning for keys/emails | Claude |
+| GitHub | *(git)* | Pushed to `github.com/samriddhi56652/hr-policy-assistant` (public) | You |
