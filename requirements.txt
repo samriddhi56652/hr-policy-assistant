@@ -1,0 +1,40 @@
+python-dotenv
+
+# agent / orchestration (langchain 1.x needed for create_agent)
+langchain>=1.0,<2
+langchain-core>=1.0,<2
+langchain-community
+langchain-text-splitters
+langgraph>=0.2
+
+# LLM: Vertex Gemini primary + Groq fallback via LiteLLM
+litellm
+langchain-litellm
+langchain-openai
+
+# vector store: Qdrant hybrid (dense + BM25)
+langchain-qdrant
+qdrant-client
+fastembed
+
+# document ingestion
+google-cloud-storage
+pypdf
+python-docx
+python-pptx
+
+# Jina reranker (REST)
+requests
+
+# web app + Google login
+streamlit
+Authlib
+
+# safety guardrail + semantic cache
+google-cloud-modelarmor
+numpy
+pydantic
+
+# tracing + evaluation
+langsmith
+openevals

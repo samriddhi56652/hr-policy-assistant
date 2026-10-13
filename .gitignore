@@ -1,0 +1,20 @@
+# personal notes — not pushed
+DIFFERENCES.md
+OBSERVATIONS.md
+
+# secrets
+.env
+deploy.env.yaml
+.streamlit/
+
+# virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# editor / OS clutter
+.vscode/
+.idea/
+.DS_Store
