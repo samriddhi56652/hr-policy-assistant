@@ -111,5 +111,6 @@ Which files were created or changed in each step, what changed, and who made the
 | GitHub | `README.md` | Created — overview, architecture diagrams (mermaid), tech stack, measured results, design decisions, structure, how to run/deploy | Claude |
 | GitHub | `.env.example`, `deploy.env.example.yaml`, `secrets.toml.example` | Created — settings templates with placeholders only | Claude |
 | GitHub | `TESTS.md`, `PROGRESS.md`, `CHANGELOG.md` | Personal details replaced with placeholders (emails, billing IDs, live URL) | Claude |
-| GitHub | *(git)* | Repository initialised; first commit `ec84e05` (57 files) after scanning for keys/emails | Claude |
+| GitHub | *(git)* | Repository initialised; first commit `42f7de3` (57 files) after scanning for keys/emails | Claude |
 | GitHub | *(git)* | Pushed to `github.com/samriddhi56652/hr-policy-assistant` (public) | You |
+| GitHub | *(git)* | Commit messages rewritten to drop the co-author line (files unchanged); force-pushed | Claude (rewrite) · You (push) |
