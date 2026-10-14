@@ -98,6 +98,12 @@ Which files were created or changed in each step, what changed, and who made the
 | 24e | `deploy.env.yaml` | `ALLOWED_EMPLOYEE_EMAILS: "approved-user-1@example.com,approved-user-2@example.com"` (only that line touched) | Claude |
 | 24e | `Dockerfile` | `--browser.gatherUsageStats=false` added to the start command | Claude |
 
+## Cleanup (step 25 — light tidy-up)
+
+| Step | File | Change | Made by |
+|---|---|---|---|
+| 25 | *(no files)* | Google Cloud: deleted old revision `hr-rag-assistant-00001` and 2 unused container images (kept the live one, `latest`); disabled version 1 of `groq-api-key` and `qdrant-api-key` (duplicates; reversible); switched off the Cloud Quotas API | Claude |
+
 ## Publishing
 
 | Step | File | Change | Made by |

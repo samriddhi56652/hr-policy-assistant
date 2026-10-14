@@ -52,6 +52,7 @@ Related files: [PROGRESS.md](PROGRESS.md) (the step plan) · [ERRORS.md](ERRORS.
 | 24e.5 | Public redeploy: settings + what a stranger sees | ✅ login page only |
 | 24e.6 | Real logins on the live app | ✅ allowed → GRANTED; other account → app refused (lock 2) · lock 1 (Google test users) did **not** block it |
 | 24f | Final checks: cloud logs of a full question, errors, access decisions | ✅ |
+| 25 | Light tidy-up — live app unaffected | ✅ |
 
 ---
 
@@ -730,3 +731,21 @@ No errors, tracebacks or exceptions since the public deploy; no `BACKUP MODEL US
 | Personal emails / billing IDs / project number in staged content | none (replaced with placeholders beforehand) ✅ |
 | Public page | 57 files, README shown; no private files ✅ |
 | README diagrams | the review browser blocked GitHub's diagram service ("Unable to render rich display", `ERR_BLOCKED_BY_CLIENT`); both diagrams validated by rendering them with mermaid.ink → valid ✅ |
+
+---
+
+## Step 25 — Light tidy-up (app stays live)
+
+**What & why:** Removed what the live app doesn't use, after first checking which image and secret versions it *does* use (live revision `00002` → image `229a8a…`; secrets read as `latest` = version 2).
+
+**Result:**
+
+| Check | After |
+|---|---|
+| Cloud Run revisions | only `hr-rag-assistant-00002-pp6` (the live one) ✅ |
+| Container images | only `229a8a…` (`latest`) — 2 old images deleted ✅ |
+| Secrets | `groq-api-key` / `qdrant-api-key`: v2 enabled, v1 **disabled** (reversible) ✅ |
+| Cloud Quotas API | off ✅ |
+| Live app | HTTP 200, Streamlit page served ✅ |
+
+**Means:** ✅ Tidier, slightly cheaper project; the live app is unchanged. BigQuery APIs were left on — they're enabled by default in every Google Cloud project and cost nothing unused.

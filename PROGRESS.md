@@ -136,6 +136,7 @@ Each step: **What** it is, and **Why** we're doing it.
   - What: README with architecture diagrams, results and design decisions; example settings files; personal details in the notes replaced with placeholders.
   - Why: To show the project (code + how it was built and tested) to interviewers. Secrets and private notes stay out via `.gitignore` — checked before the first push.
 
-- [ ] **25. Cleanup**
+- [ ] **25. Cleanup** *(full shutdown on hold — app kept live for interviews; cost control: allow-list, max 2 instances, 900 s timeout, scale to zero, budget alert on the paying account)*
+  - [x] Light tidy-up (2026-10-14): old revision `00001` and 2 unused images deleted; old secret versions disabled; Cloud Quotas API switched off. BigQuery APIs left on (on by default in every project, unused, free)
   - What: Delete or stop the cloud resources once you're done (Cloud Run service, container images, bucket, Model Armor template, secrets, Qdrant cluster, API keys).
   - Why: Things left running keep costing money and leave keys and data online. Course lecture: "Cleanup".
